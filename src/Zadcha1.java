@@ -1,3 +1,5 @@
+import java.awt.image.AbstractMultiResolutionImage;
+import java.io.File;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -11,26 +13,30 @@ public class Zadcha1 {
             int x = (int) (rand.nextInt(100) + 1);
             System.out.println("Введите число от 1 до 100");
             int y = scanner.nextInt();
+            int popytka =1;
             while (y>100){
                 System.out.println("Вы ввели больше ста");
                 y = scanner.nextInt();
+                popytka = popytka+1;
             }while (y<=0){
                 System.out.println("Вы ввели меньше нуля");
                 y=scanner.nextInt();
+                popytka = popytka+1;
             }
             while (y < x) {
                 System.out.println(a1);
                 y = scanner.nextInt();
+                popytka = popytka+1;
             }
             while (y > x) {
                 System.out.println(a2);
                 y = scanner.nextInt();
+                popytka=popytka+1;
             }
-            while (y == x) ;
-            {
-                System.out.println(r);
-                y = scanner.nextInt();
-            }System.out.println(r);
-        }
-    }
+            while (y == x) ;{
+                System.out.println(r + " Количество попыток " + popytka + " Загаданное число " + x);
+            }
+            }
+
+}
 
